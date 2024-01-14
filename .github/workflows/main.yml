@@ -29,6 +29,5 @@ jobs:
 
 
       - name: Push Docker image to DockerHub
-        run: docker push lilywhale/ci_assignment_python_app:ci-cd-app
-
+        run: docker push lilywhale/ci-cd-app .
      
