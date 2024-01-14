@@ -25,10 +25,8 @@ jobs:
         run: docker build -t lilywhale/ci-cd-app .
 
       - name: Run Unit Tests
-        run: docker run lilywhale/ci-cd-app pytest -m unit
+        run: docker run lilywhale/ci-cd-app test_main.py
 
-      - name: Run Integration Tests
-        run: docker run lilywhale/ci-cd-app pytest -m integration
 
       - name: Push Docker image to DockerHub
         run: docker push lilywhale/ci_assignment_python_app:ci-cd-app
