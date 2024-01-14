@@ -3,7 +3,7 @@ FROM python:3.8-slim
 
 # copy the requirements file into the image
 COPY ./requirements.txt /app/requirements.txt
-COPY ./test_main.txt /app/test_main.txt
+COPY ./test_main.py /app/test_main.py
 
 # switch working directory
 WORKDIR /app
