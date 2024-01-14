@@ -3,6 +3,7 @@ FROM python:3.8-slim
 
 # copy the requirements file into the image
 COPY ./requirements.txt /app/requirements.txt
+COPY test/ /path/to/test/
 
 # switch working directory
 WORKDIR /app
@@ -16,4 +17,5 @@ COPY . /app
 # configure the container to run in an executed manner
 ENTRYPOINT [ "python" ]
 
-CMD ["app.py" ]
+# Run tests
+CMD ["pytest", "-m", "unit"]
