@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
     
       - name: Build Docker image
-        run: docker build -t lilywhale/ci_assignment_python_app:ci-cd-app
+        run: docker build -t lilywhale/ci-cd-app .
 
       - name: Run Unit Tests
         run: docker run lilywhale/ci-cd-app test_main.py
