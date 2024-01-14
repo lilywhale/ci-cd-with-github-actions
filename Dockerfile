@@ -18,4 +18,4 @@ COPY . /app
 ENTRYPOINT [ "python" ]
 
 # Run tests
-CMD ["pytest", "-m", "unit"]
+CMD ["test_main.py"]
